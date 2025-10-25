@@ -2,14 +2,13 @@
     {{/* 
         <div class="social-media">
             {{ range site.Params.social}}
-                <a href="{{ .url }}"><img alt="{{ .name }}" src="{{ .icon }}"/></a>
+                <a href="{{ .url }}"><img alt="{{ .name }}" src="{{/static/img/favicon.ico}}"/></a>
             {{ end }}
         </div>
         */}}        
     <div class="logo h-card">
         <a class="u-url" href="{{ .Site.Home.Permalink }}">
-            <img alt="Site Logo" class="site-logo u-photo" src="{{ $.Site.Params.logo | default "/images/logo.png" }}"/>
-        </a>
+            <img alt="Site Logo" class="site-logo u-photo" src="{{ $.Site.Params.logo | default "/static/img/favicon.ico" }}" style="width:100px;height:auto;"/>
         <p>© {{ now.Format "2006" }}
             {{ .Site.Title }}</p>
     </div>
@@ -23,4 +22,15 @@
         </ul>
     </nav>
     {{ partial "search-index.html" . }}
+    <!-- Ko-fi Floating Widget -->
+<script src="https://ko-fi.com/infodump314"></script>
+<script>
+  kofiWidgetOverlay.draw('infodump', {
+    type: 'floating-chat',   
+    floating-chat.donateButton.text: 'Support Me',
+    floating-chat.donateButton.background: '#29abe0',  
+    floating-chat.donateButton.textColor: '#fff'      
+  });
+</script>
+
 </footer>
