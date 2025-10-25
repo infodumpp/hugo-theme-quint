@@ -2,13 +2,13 @@
     {{/* 
         <div class="social-media">
             {{ range site.Params.social}}
-                <a href="{{ .url }}"><img alt="{{ .name }}" src="{{/static/img/favicon.ico}}"/></a>
+                <a href="{{ .url }}"><img alt="{{ .name }}" src="{{/img/favicon.ico}}"/></a>
             {{ end }}
         </div>
         */}}        
     <div class="logo h-card">
         <a class="u-url" href="{{ .Site.Home.Permalink }}">
-            <img alt="Site Logo" class="site-logo u-photo" src="{{ $.Site.Params.logo | default "/static/img/favicon.ico" }}" style="width:100px;height:auto;"/>
+            <img alt="Site Logo" class="site-logo u-photo" src="{{ $.Site.Params.logo | default "/img/favicon.ico" }}" style="width:100px;height:auto;"/>
         <p>© {{ now.Format "2006" }}
             {{ .Site.Title }}</p>
     </div>
