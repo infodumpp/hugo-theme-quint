@@ -10,6 +10,7 @@
     <link href="/css/styles.css" rel="stylesheet"/>
     {{ range .Site.Params.css -}}
         <link href="/{{ . }}" rel="stylesheet"/>
+        <link rel="stylesheet" href="/css/custom.css">
     {{- end }}
   
     {{ partial "extra_head.html" . }}

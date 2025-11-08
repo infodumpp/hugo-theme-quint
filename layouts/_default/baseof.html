@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        {{- block "main" . }}{{- end }}
-        {{- partial "footer.html" . -}}
-    </body>
+<html lang="en">
+  <head>
+    {{ partial "head.html" . }}
+    <link rel="stylesheet" href="/css/custom.css">
+  </head>
+  <body>
+    {{ partial "header.html" . }}
+
+    {{ block "main" . }}
+      <main>
+        <p style="text-align:center; color: gray;">Main content not found — check your index.html layout.</p>
+      </main>
+    {{ end }}
+
+    {{ partial "footer.html" . }}
+    <script src="/js/filter.js"></script>
+  </body>
 </html>
