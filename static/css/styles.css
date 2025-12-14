@@ -46,7 +46,7 @@ body {
     color: var(--secondary-text);
     min-height: 100vh;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 a,
@@ -579,7 +579,7 @@ h2 > code {
     }
 
     .container {
-        margin: 3rem auto;
+        margin: 1rem auto;
         max-width: 800px;
     }
 
