@@ -3,9 +3,9 @@
   <h1>{{ .Title }}</h1>
 
   <div class="tags-gallery">
-    {{ range .Data.Terms.Alphabetical }}
-      <a href="{{ .Page.RelPermalink }}" class="tag-card">
-        <h2>{{ .LinkTitle }}</h2>
+    {{ range .Data.Terms }}
+      <a href="{{ .Page.Permalink }}" class="tag-card">
+        <h2>{{ .Page.Title }}</h2>
         <p>{{ .Count }} post{{ if ne .Count 1 }}s{{ end }}</p>
       </a>
     {{ end }}
